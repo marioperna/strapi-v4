@@ -8,7 +8,7 @@ COPY ./package.json ./package-lock.json ./
 ENV PATH /opt/node_modules/.bin:$PATH
 RUN npm install
 WORKDIR /opt/app
-RUN chown -R node /opt/app/node_modules
+RUN chown -R node node_modules
 COPY ./ .
 RUN npm run build
 EXPOSE 1337
