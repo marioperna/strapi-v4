@@ -29,7 +29,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: strapi-v4
-          file: ./strapi-v4/Dockerfile
+          context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/strapi-v4:latest
