@@ -2,7 +2,6 @@ version: "3"
 services:
   strapi:
     container_name: strapi
-    # build: .
     image: marioperna/strapi-v4:latest
     restart: unless-stopped
     volumes:
